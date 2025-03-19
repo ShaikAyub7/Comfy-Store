@@ -13,8 +13,8 @@ export const loader = async () => {
 const Products = () => {
   return (
     <>
-      <ProductContainer />
       <Filters />
+      <ProductContainer />
       <Pagination />
     </>
   );
