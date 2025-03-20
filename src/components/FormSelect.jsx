@@ -14,7 +14,7 @@ const FormSelect = ({ label, name, list, defaultValue, size }) => {
       >
         {list.map((item) => {
           return (
-            <option key={item} value={item}>
+            <option key={item} value={item} className={"capitalize"}>
               {item}
             </option>
           );

@@ -5,8 +5,8 @@ import NavLinks from "./NavLinks";
 import { useEffect, useState } from "react";
 
 const themes = {
-  winter: "winter",
-  dracula: "dracula",
+  winter: "nord",
+  dracula: "night",
 };
 const localTheme = () => localStorage.getItem("dark-theme");
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal ">
+          <ul className="menu menu-horizontal  ">
             <NavLinks />
           </ul>
         </div>

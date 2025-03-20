@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+
+const links = [
+  { id: 1, url: "/", text: "home" },
+  { id: 2, url: "about", text: "about" },
+  { id: 3, url: "products", text: "products" },
+  { id: 4, url: "cart", text: "cart" },
+  { id: 5, url: "checkout", text: "checkout" },
+  { id: 6, url: "orders", text: "orders" },
+];
 const NavLinks = () => {
+  const [user, setUser] = useState(false);
   return (
     <>
-      {" "}
-      <li>
-        <NavLink to={"/"}>Home</NavLink>
-      </li>
-      <li>
-        <NavLink to={"about"}>About</NavLink>
-      </li>
-      <li>
-        <NavLink to={"products"}>Products</NavLink>
-      </li>
-      <li>
-        <NavLink to={"cart"}>Cart</NavLink>
-      </li>
-      <li>
-        <NavLink to={"checkout"}>Checkout</NavLink>
-      </li>
-      <li>
-        <NavLink to={"orders"}>Orders</NavLink>
-      </li>
+      {links.map((link) => {
+        const { url, id, text } = link;
+        return (
+          <li key={id}>
+            <NavLink to={url} className={"capitalize font-medium"}>
+              {text}
+            </NavLink>
+          </li>
+        );
+      })}
     </>
   );
 };

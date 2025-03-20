@@ -7,7 +7,7 @@
   }
 }
 @plugin "daisyui" {
-  themes: "dracula", "winter";
+  themes: all;
 }
 .active {
   background: #111111;
