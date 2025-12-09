@@ -12,10 +12,12 @@ import {
   Checkout,
   Cart,
 } from "./pages";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { loader as LandingLoader } from "./pages/Landing";
 import { loader as SingleProductLoader } from "./pages/SingleProduct";
 import { loader as ProductsLoader } from "./pages/Products";
+
 const router = createBrowserRouter([
   {
     path: "/",
